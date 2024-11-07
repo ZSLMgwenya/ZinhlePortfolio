@@ -1,0 +1,47 @@
+*{
+scroll-behavior: smooth;
+font-family: serif;
+overflow-x: hidden;
+}
+
+header{
+position: fixed;
+top: 0;
+left: 0vh;
+width: 100%;
+background-color: grey;
+padding: 30px 80%;
+display: flex;
+
+}
+
+.Name{
+display: flex;
+left: 1vh;
+position: absolute;
+
+}
+
+img{
+    width: 40vh;
+    margin-top: 8%;
+    animation: bounce 1s infinite;
+    border: 10px solid grey;
+    left: 140vh;
+    position: absolute;
+}
+
+/* Create the bounce animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);  /* Start position */
+    }
+    50% {
+        transform: translateY(-30px);  /* Move up 30px */
+    }
+    100% {
+        transform: translateY(0);  /* Back to start position */
+    }
+}
+
+
