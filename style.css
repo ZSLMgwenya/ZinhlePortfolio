@@ -1,47 +1,141 @@
 *{
-scroll-behavior: smooth;
-font-family: serif;
-overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    overflow-x: hidden;
 }
 
 header{
 position: fixed;
+margin-top: 50px;
 top: 0;
-left: 0vh;
+left: 0;
 width: 100%;
-background-color: grey;
-padding: 30px 80%;
+padding: 1rem 9%;
+background-color: azure;
+filter: drop-shadow(10px);
 display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    transition: 0.5 ease;
+}
+
+.logo:hover{
+
+transform:scale(1.1);
 
 }
 
-.Name{
-display: flex;
-left: 1vh;
-position: absolute;
+nav a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    
 
 }
 
-img{
-    width: 40vh;
-    margin-top: 8%;
-    animation: bounce 1s infinite;
-    border: 10px solid grey;
-    left: 140vh;
-    position: absolute;
+a:hover, a.active{
+color: grey;
+
 }
 
-/* Create the bounce animation */
-@keyframes bounce {
+section{
+
+    min-height: 100vh;
+    padding: 4rem 9% 5rem;
+}
+
+.home  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: bisque;
+    
+}
+
+.home .intro h1{
+font-size: 40px;
+line-height: 1.3;
+font-weight: bold;
+}
+
+.home .intro h4{
+font-size: 35px;
+margin-bottom: 1rem;
+font-weight: 200;
+
+}
+@keyframes bounce{
     0% {
-        transform: translateY(0);  /* Start position */
+        transform: translate3d(0, 0, 0); /* Start at normal position */
     }
     50% {
-        transform: translateY(-30px);  /* Move up 30px */
+        transform: translate3d(0, -50px, 0); /* Move up a little */
     }
     100% {
-        transform: translateY(0);  /* Back to start position */
+        transform: translate3d(0, 0, 0); /* Return to normal position */
     }
 }
 
 
+.home-img {
+    border-radius: 50% ;  
+    width: 45rem;       
+    height: 30rem;      
+    overflow: hidden;    
+    display: flex;       
+    justify-content: center;
+    align-items: center;
+    /* transition: transform 0.3s ease;  */
+    animation: bounce 3s ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    border: 0.5rem solid grey;
+
+  }
+  
+.home-img img{
+    width: 100%;         
+    height: 100%;        
+    object-fit: cover; 
+    
+
+} 
+
+ .home-img img:hover{
+font-size: 1.8rem;
+font-weight: 500;
+
+ }
+
+ .icons a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 4rem;
+height: 4rem;
+font-size: 3vh;
+border-radius: 50%;
+border: 0.2rem solid grey;
+margin-top: 30px;
+text-decoration: none;
+ }
+
+ .icons a:hover{
+    color: black;
+    transform: scale(1) translateY(-2px);
+
+
+ }
