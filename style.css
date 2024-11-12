@@ -4,16 +4,19 @@
     box-sizing: border-box;
     outline: none;
     overflow-x: hidden;
+    font-family: 'Roboto';
+    scroll-behavior: smooth;
+/* background-image: url(hex-textured-background-networking.jpg); */
 }
 
 header{
+    
 position: fixed;
-margin-top: 50px;
 top: 0;
 left: 0;
 width: 100%;
 padding: 1rem 9%;
-background-color: azure;
+background-color: rgba(148,187,233,1);
 filter: drop-shadow(10px);
 display: flex;
 justify-content: space-between;
@@ -23,7 +26,7 @@ z-index: 100;
 
 .logo{
     font-size: 25px;
-    color: black;
+    color: #333333 ;
     text-decoration: none;
     transition: 0.5 ease;
 }
@@ -36,7 +39,7 @@ transform:scale(1.1);
 
 nav a{
     font-size: 20px;
-    color: black;
+    color: #34495E;
     text-decoration: none;
     margin-left: 4rem;
     font-weight: 500;
@@ -61,28 +64,41 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: bisque;
-    
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);    
+
 }
 
 .home .intro h1{
 font-size: 40px;
 line-height: 1.3;
 font-weight: bold;
+color: #2C3E50 ;
 }
 
 .home .intro h4{
 font-size: 35px;
 margin-bottom: 1rem;
 font-weight: 200;
+color: #34495E;
 
 }
+
+.home .intro p{
+color: #F1F1F1;
+
+}
+.home .intro h5{
+    padding-top: 20px;
+    color: #2C3E50;
+}
+
 @keyframes bounce{
     0% {
         transform: translate3d(0, 0, 0); /* Start at normal position */
     }
     50% {
-        transform: translate3d(0, -50px, 0); /* Move up a little */
+        transform: translate3d(0, -70px, 0); /* Move up a little */
     }
     100% {
         transform: translate3d(0, 0, 0); /* Return to normal position */
@@ -92,8 +108,8 @@ font-weight: 200;
 
 .home-img {
     border-radius: 50% ;  
-    width: 45rem;       
-    height: 30rem;      
+    width: 40rem;       
+    height: 40rem;      
     overflow: hidden;    
     display: flex;       
     justify-content: center;
@@ -102,7 +118,7 @@ font-weight: 200;
     animation: bounce 3s ease;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    border: 0.5rem solid grey;
+    border: 0.5rem solid azure;
 
   }
   
@@ -128,14 +144,96 @@ width: 4rem;
 height: 4rem;
 font-size: 3vh;
 border-radius: 50%;
-border: 0.2rem solid grey;
+border: 0.2rem solid lightblue;
 margin-top: 30px;
 text-decoration: none;
+color: azure;
  }
 
  .icons a:hover{
-    color: black;
+    color: lightblue;
     transform: scale(1) translateY(-2px);
 
 
  }
+
+
+ #about{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   
+   
+ }
+
+ .aboutme h1{
+padding-bottom: 15px;
+
+ }
+
+ .seccontainer{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  } 
+
+.skills{
+
+margin-top: 60px;
+}
+
+.skills h1{
+
+padding-bottom: 30px;
+
+}
+
+ .skills img{
+    width: 7rem;       
+    height: 7rem;
+    display: inline-flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+ }
+
+footer{
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);  
+
+}
+footer .icons{
+
+    padding: 15px;
+
+
+}
+.wrap{
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      flex-direction: row ;  
+    } 
+
+    #contact .icons a{
+
+        display: inline-flex; 
+        justify-content: center;
+        align-items: center;
+        width: 8rem;
+        height: 8rem;
+        font-size: 6vh;
+        border-radius: 50%;
+        border: 0.2rem solid lightblue;
+        margin-top: 30px;
+        text-decoration: none;
+        color: azure;
+
+    }
+
+    .seccontainer img{
+        width: 7rem;       
+        height: 7rem;
+        display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+     }
