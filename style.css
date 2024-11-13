@@ -6,6 +6,7 @@
     overflow-x: hidden;
     font-family: 'Roboto';
     scroll-behavior: smooth;
+    
 /* background-image: url(hex-textured-background-networking.jpg); */
 }
 
@@ -85,7 +86,7 @@ color: #34495E;
 }
 
 .home .intro p{
-color: #F1F1F1;
+    color: #34495E;
 
 }
 .home .intro h5{
@@ -166,23 +167,78 @@ color: azure;
 
  .aboutme h1{
 padding-bottom: 15px;
-
  }
+.container {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tab {
+    overflow: hidden;
+    background: transparent;
+  
+  }
+
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 20%;
+    transition: 0.3s;
+    font-size: 17px;
+    display: flex;
+    width: 50%;                
+    color: #333333 ;
+
+  }
+
+  .tab button:hover {
+    background-color: rgba(148,187,233,1);
+}
+
+  .tab button.active {
+    background-color: rgba(148,187,233,1);
+}
+
+  .tabcontent {
+    display: none;
+    padding: 60px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    background: transparent;
+  }
+
+  @-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
 
  .seccontainer{
   display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
   } 
 
-.skills{
+#skills{
 
-margin-top: 60px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   
+   
+
 }
 
-.skills h1{
+.skills h1, h4{
 
 padding-bottom: 30px;
+color: #2C3E50 ;
 
 }
 
@@ -196,14 +252,14 @@ padding: 15px;
  }
 
 footer{
-background: rgb(238,174,202);
+
 background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);  
 
 }
-footer .icons{
+footer .icons a{
 
-    padding: 15px;
-
+    margin-left: 200px;
+    border: 0.3rem solid lightblue;
 
 }
 .wrap{
@@ -229,6 +285,11 @@ footer .icons{
 
     }
 
+    h3{
+        margin-left: 12%;
+        color: #2C3E50;
+
+    }
     .seccontainer img{
         width: 7rem;       
         height: 7rem;
@@ -237,3 +298,25 @@ footer .icons{
     align-items: center;
     padding: 15px;
      }
+
+     .service-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        
+      }
+  
+      .service-left,
+      .service-right {
+        width: 48%;
+        margin-top: 40px;
+       color: #151f29;
+      }
+     
+      .services h1{
+        color: #2C3E50;
+
+      }
+
+      
