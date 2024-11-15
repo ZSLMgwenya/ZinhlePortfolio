@@ -4,10 +4,9 @@
     box-sizing: border-box;
     outline: none;
     overflow-x: hidden;
-    font-family: 'Roboto';
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
     
-/* background-image: url(hex-textured-background-networking.jpg); */
 }
 
 header{
@@ -17,7 +16,7 @@ top: 0;
 left: 0;
 width: 100%;
 padding: 1rem 9%;
-background-color: rgba(148,187,233,1);
+background-color: rgba(0, 0, 0, 0.5) ;
 filter: drop-shadow(10px);
 display: flex;
 justify-content: space-between;
@@ -27,7 +26,7 @@ z-index: 100;
 
 .logo{
     font-size: 25px;
-    color: #333333 ;
+        color: azure;
     text-decoration: none;
     transition: 0.5 ease;
 }
@@ -40,7 +39,7 @@ transform:scale(1.1);
 
 nav a{
     font-size: 20px;
-    color: #34495E;
+    color: azure;
     text-decoration: none;
     margin-left: 4rem;
     font-weight: 500;
@@ -50,8 +49,7 @@ nav a{
 }
 
 a:hover, a.active{
-color: grey;
-
+  color: teal;
 }
 
 section{
@@ -65,44 +63,43 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);    
-
-}
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  }
 
 .home .intro h1{
 font-size: 40px;
 line-height: 1.3;
 font-weight: bold;
-color: #2C3E50 ;
+color: azure ;
+overflow-y: hidden;
 }
 
 .home .intro h4{
 font-size: 35px;
 margin-bottom: 1rem;
 font-weight: 200;
-color: #34495E;
+color: azure;
 
 }
 
 .home .intro p{
-    color: #34495E;
+    color: azure;
 
 }
 .home .intro h5{
     padding-top: 20px;
-    color: #2C3E50;
+    color: azure;
 }
-
+/* Bouncing Image Effect */
 @keyframes bounce{
     0% {
-        transform: translate3d(0, 0, 0); /* Start at normal position */
+        transform: translate3d(0, 0, 0); 
     }
     50% {
-        transform: translate3d(0, -70px, 0); /* Move up a little */
+        transform: translate3d(0, -70px, 0);
     }
     100% {
-        transform: translate3d(0, 0, 0); /* Return to normal position */
+        transform: translate3d(0, 0, 0); 
     }
 }
 
@@ -115,11 +112,11 @@ color: #34495E;
     display: flex;       
     justify-content: center;
     align-items: center;
-    /* transition: transform 0.3s ease;  */
     animation: bounce 3s ease;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     border: 0.5rem solid azure;
+    
 
   }
   
@@ -160,8 +157,8 @@ color: azure;
 
 
  #about{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+ 
    
  }
 
@@ -191,17 +188,17 @@ padding-bottom: 15px;
     font-size: 17px;
     display: flex;
     width: 50%;                
-    color: #333333 ;
+    color: azure;
 
   }
 
   .tab button:hover {
-    background-color: rgba(148,187,233,1);
-}
+    background-color: rgba(0, 0, 0, 0.5) ;
+  }
 
   .tab button.active {
-    background-color: rgba(148,187,233,1);
-}
+    background-color: rgba(0, 0, 0, 0.5) ;
+  }
 
   .tabcontent {
     display: none;
@@ -229,16 +226,14 @@ padding-bottom: 15px;
 
 #skills{
 
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);   
-   
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
 
 }
 
 .skills h1, h4{
 
 padding-bottom: 30px;
-color: #2C3E50 ;
+color: azure;
 
 }
 
@@ -253,7 +248,7 @@ padding: 15px;
 
 footer{
 
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);  
+  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
 
 }
 footer .icons a{
@@ -287,7 +282,8 @@ footer .icons a{
 
     h3{
         margin-left: 12%;
-        color: #2C3E50;
+        color: azure;
+
 
     }
     .seccontainer img{
@@ -303,7 +299,7 @@ footer .icons a{
         display: flex;
         justify-content: space-between;
         gap: 30px;
-
+      color: azure;
         
       }
   
@@ -311,12 +307,15 @@ footer .icons a{
       .service-right {
         width: 48%;
         margin-top: 40px;
-       color: #151f29;
+        color: azure;
       }
      
       .services h1{
-        color: #2C3E50;
+        color: azure;
 
       }
+      .tabcontent p{
 
+        color: azure;
+      }
       
