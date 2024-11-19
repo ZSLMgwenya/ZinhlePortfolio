@@ -1,5 +1,3 @@
-:
-
 👨‍💻 Welcome to My Portfolio!
 Hello there! 👋 I'm Zinhle Ngwenya, a passionate and dedicated Software Developer with a love for solving complex problems and building awesome things. 🚀
 
