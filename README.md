@@ -32,3 +32,5 @@ assets/: Folder containing images and other assets used in the webpage.
 
 <b>Contact</b>
 For inquiries, you can reach out via email: zinhlengwenya962@gmail.com
+
+<b>https://zslngwenya.github.io/ZinhlePortfolio/</b>
