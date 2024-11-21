@@ -1,15 +1,34 @@
-👨‍💻 Welcome to My Portfolio!
-Hello there! 👋 I'm Zinhle Ngwenya, a passionate and dedicated Software Developer with a love for solving complex problems and building awesome things. 🚀
+<b>Zinhle Webpage👋</b>
 
-I thrive on writing clean, efficient code, and constantly learning new technologies. Whether it’s building web applications, working on backend systems, or experimenting with exciting new tools, I’m always up for a challenge! 💻🔧
+This is a personal webpage showcasing Zinhle Ngwenya's profile as a Software Developer. The webpage includes sections for an introduction, skills, education, services offered, and contact information.
 
-🌟 About Me
-I’ve always been fascinated by how things work—especially technology. My journey has been one of constant growth. I believe that every line of code I write should solve a real-world problem and add value, whether it’s a tiny optimization or a whole new feature.
+<b>Features: </b>
 
-So check out my portfolio to know a lot about me.
+Header Navigation: Quick links to navigate to different sections of the webpage: About Me, Skills, and Contact.
+Home Section: Introduction of Zinhle with a profile image, a brief description, and social media links to LinkedIn, GitHub, and email.
+About Section: Includes tabs for displaying the "About Me" and "Education" sections.
+Skills Section: Displays a list of skills with associated icons sourced from Flaticon such as HTML, CSS, JavaScript, MongoDB, Angular, NodeJS, React, MySQL, and Git.
+Services Section: Describes the services offered, including frontend and backend development, version control, and Microsoft application management.
+Contact Form: A simple form allowing users to send messages directly to Zinhle.
+Social Media Links: Direct links to social media profiles such as LinkedIn, GitHub, and WhatsApp.
 
-Here’s what you can expect in the near future:
+<b>Technologies Used:</b>
 
-Innovative Projects: From integrating the latest tech stacks to exploring cutting-edge tools, I’ll be building things that challenge my skills and help solve real-world problems. 🛠️
-Learning & Experimenting: Expect a mix of learning-based projects where I explore new technologies, frameworks, and techniques. If there’s something new out there, you can bet I’ll be experimenting with it! 🚀
-So, stay tuned for cool projects, interesting experiments, and maybe even some tutorials along the way. Feel free to star, fork, and contribute to my projects. Who knows? The next one might just be the next big thing! 💥
+HTML: Markup for the structure of the webpage.
+CSS: Styling to make the webpage visually appealing.
+JavaScript: Tab content functionality and form submission behavior.
+Font Awesome: Icons for social media links and other interactions.
+Google Fonts: Used for custom font styling.
+Flaticon: Icons used to represent different skills in the skills section.
+
+<b>Installation:</b>
+
+Clone the repository or download the files.
+Open the index.html file in your browser to view the webpage.
+Files in this Project
+index.html: The main HTML file that defines the structure of the webpage.
+style.css: CSS file to style the webpage.
+assets/: Folder containing images and other assets used in the webpage.
+
+<b>Contact</b>
+For inquiries, you can reach out via email: zinhlengwenya962@gmail.com
