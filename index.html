@@ -181,6 +181,31 @@
 </div>
 </div>
 </footer>
+<div id="chatbot">
+    <div id="chatbot-header">
+        <h4>Chat with us!</h4>
+        <button id="close-chatbot">X</button>
+    </div>
+    <div id="chatbot-body">
+        <div id="chatbot-questions">
+            <button class="question">What is your name?</button>
+            <button class="question">What is your profession?</button>
+            <button class="question">What technologies do you use?</button>
+            <button class="question">What qualifications do you have?</button>
+            <button class="question">Can I see your LinkedIn profile?</button>
+            <button class="question">Do you have a portfolio?</button>
+            <button class="question">Can I contact you?</button>
+        </div>
+        <div id="chatbot-messages"></div>
+        <input type="text" id="chatbot-input" placeholder="Type a message...">
+        <button id="send-message">Send</button>
+    </div>
+</div>
+<button id="open-chatbot">
+  <img src="assets/robot.png" alt="Chat">
+</button>
+
+
 <!-- Javascript for the tab content -->
 <script>
   function openTab(evt, tabName) {
@@ -205,7 +230,93 @@
     document.querySelector(".tablinks").click();  
   };
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chatbot = document.getElementById('chatbot');
+        const openChatbot = document.getElementById('open-chatbot');
+        const closeChatbot = document.getElementById('close-chatbot');
+        const sendMessage = document.getElementById('send-message');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotQuestions = document.getElementById('chatbot-questions');
 
+        const responses = {
+            "What is your name?": "My name is Zinhle Ngwenya.",
+            "What is your profession?": "I am a fullstack developer.",
+            "What technologies do you use?": "I work with Java, JavaScript, Angular, PostgreSQL, HTML, and CSS.",
+            "What qualifications do you have?": "I have an advanced diploma in IT from Vaal University of Technology, majoring in software development.",
+            "Can I see your LinkedIn profile?": "Sure! Here’s my LinkedIn: <a href='https://linkedin.com/in/zinhle-mgwenya-465b27269/' target='_blank'>LinkedIn Profile</a>.",
+            "Do you have a portfolio?": "Yes, you are browsing it right now! Feel free to explore.",
+            "Can I contact you?": "Yes! For more questions, feel free to send me an email: zinhlengwenya962@gmail.com."
+        };
+
+        // Show the chatbot
+        openChatbot.addEventListener('click', function() {
+            chatbot.style.display = 'flex';
+            openChatbot.style.display = 'none';
+            chatbotMessages.innerHTML = ''; // Clear previous messages
+            chatbotQuestions.style.display = 'flex'; // Show questions
+            chatbotInput.style.display = 'none'; // Hide input initially
+            sendMessage.style.display = 'none'; // Hide send button initially
+        });
+
+        // Close the chatbot
+        closeChatbot.addEventListener('click', function() {
+            chatbot.style.display = 'none';
+            openChatbot.style.display = 'block';
+        });
+
+        // Handle question clicks
+        chatbotQuestions.addEventListener('click', function(event) {
+            if (event.target.classList.contains('question')) {
+                const question = event.target.textContent;
+                const response = responses[question] || "I’m not sure about that. You can send me an email at zinhlengwenya962@gmail.com for more details!";
+
+                const userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('chat-message', 'user');
+                userMessageElement.textContent = question;
+                chatbotMessages.appendChild(userMessageElement);
+
+                const responseMessageElement = document.createElement('div');
+                responseMessageElement.classList.add('chat-message', 'bot');
+                responseMessageElement.innerHTML = response;
+                chatbotMessages.appendChild(responseMessageElement);
+
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+                // Show chat input and send button
+                chatbotInput.style.display = 'block';
+                sendMessage.style.display = 'block';
+            }
+        });
+
+        // Send a message
+        sendMessage.addEventListener('click', function() {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                const userMessageElement = document.createElement('div');
+                userMessageElement.classList.add('chat-message', 'user');
+                userMessageElement.textContent = message;
+                chatbotMessages.appendChild(userMessageElement);
+
+                const responseMessageElement = document.createElement('div');
+                responseMessageElement.classList.add('chat-message', 'bot');
+                responseMessageElement.innerHTML = responses[message] || "I’m not sure about that. You can send me an email at <a href='mailto:zinhlengwenya962@gmail.com'>zinhlengwenya962@gmail.com</a> for more details!";
+                chatbotMessages.appendChild(responseMessageElement);
+
+                chatbotInput.value = '';
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        });
+
+        // Handle Enter key for sending message
+        chatbotInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage.click();
+            }
+        });
+    });
+</script>
 </body>
 
 
