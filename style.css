@@ -82,57 +82,59 @@ color: azure;
 
 }
 
-.home .intro p{
-  color: azure;
+.home .intro p {
+    color: azure;
+}
 
+.home .intro h5 {
+    padding-top: 20px;
+    color: azure;
 }
-.home .intro h5{
-  padding-top: 20px;
-  color: azure;
-}
+
 /* Bouncing Image Effect */
-@keyframes bounce{
-  0% {
-      transform: translate3d(0, 0, 0); 
-  }
-  50% {
-      transform: translate3d(0, -60px, 0);
-  }
-  100% {
-      transform: translate3d(0, 0, 0); 
-  }
+@keyframes bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -60px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
+
 .home-img {
-overflow: hidden;    
-display: flex;       
-justify-content: center;
-align-items: center;
-padding: 0.5rem;
-position: relative;
-border-radius: 50%; 
-border: 10px solid transparent;
-background-clip: padding-box;
-animation: bounce 3s ease infinite alternate;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    animation: bounce 3s ease infinite alternate;
 }
 
 .home-img img {
-width: 100%;         
-height: 100%;        
-border-radius: 50%;  
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .home-img::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-border-radius: 50%;  
-background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
-background-size: 400% 400%; 
-animation: borderGradientShift 5s ease infinite; 
-z-index: -1; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;  
+    background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    background-size: 400% 400%; 
+    animation: borderGradientShift 5s ease infinite; 
+    z-index: -1; 
 }
 
 @keyframes borderGradientShift {
@@ -333,48 +335,6 @@ footer .icons a{
     color: #473B7B;
 }
 
-.contact-form h3 {
-    margin-bottom: 20px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid lightblue;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 1rem;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #ddd;
-}
-
-.contact-form button {
-    padding: 10px 20px;
-    border: none;
-    background-color: lightblue;
-    color: #473B7B;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #30D2BE;
-    color: white;
-}
-
   h3{
       margin-left: 0%;
       color: azure;
@@ -415,10 +375,62 @@ footer .icons a{
     }
     
 
+    .wrapper {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      display: none; 
+  }
+  
+  .bar {
+      width: 25px;
+      height: 4px;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 10px;
+      transition: all 0.5s;
+  }
+  
+  .top {
+      left: 25%;
+      top: 25%;
+  }
+  
+  .middle {
+      left: 25%;
+      top: 50%;
+  }
+  
+  .bottom {
+      left: 25%;
+      top: 75%;
+  }
+  
+  .wrapper.active .middle {
+      width: 20px;
+      height: 20px;
+      top: 30%;
+      left: 30%;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.3;
+  }
+  
+  .wrapper.active .top {
+      top: 50%;
+      transform: rotate(45deg);
+      background-color: white;
+  }
+  
+  .wrapper.active .bottom {
+      top: 50%;
+      transform: rotate(-45deg);
+      background-color: white;
+  }
 /* Media Queries for Responsiveness */
-
-/* Media Queries for Responsiveness */
-
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 header {
@@ -499,15 +511,6 @@ font-size: 12px;
   font-size: 2vh;
 }
 
-.contact-form input,
-.contact-form textarea {
-  font-size: 0.9rem;
-}
-
-.contact-form button {
-  font-size: 0.9rem;
-}
-
 .service-container {
   flex-direction: column;
 }
@@ -584,15 +587,6 @@ nav a {
   font-size: 5vh;
 }
 
-.contact-form input,
-.contact-form textarea {
-  font-size: 1rem;
-}
-
-.contact-form button {
-  font-size: 1rem;
-}
-
 .service-container {
   flex-direction: column;
 }
@@ -601,4 +595,29 @@ nav a {
 .service-right {
   width: 100%;
 }
+
+}
+
+/*Media query for the toggle menu*/
+@media (max-width: 768px) {
+    .wrapper {
+        display: block;
+    }
+    nav {
+        display: none; 
+        flex-direction: column; 
+        max-height: 0; 
+        overflow-y: hidden; 
+        transition: max-height 0.5s ease-out; 
+    }
+    nav.active {
+        display: flex;
+        max-height: 200px;
+        overflow-y: auto; 
+        margin-left: 100px;
+    }
+    nav a {
+        padding: 10px;
+        text-align: center;
+    }
 }
