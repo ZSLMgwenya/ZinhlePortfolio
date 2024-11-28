@@ -263,11 +263,11 @@ align-items: center;
 padding: 15px;
 }
 
-footer{
+/* footer{
 
 background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
 
-}
+} */
 footer .icons a{
 
   margin-left: 200px;
@@ -297,7 +297,7 @@ footer .icons a{
 
   }
   footer {
-    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    background-color: #3584A7;
     padding: 40px 20px;
     color: white;
     text-align: center;
@@ -430,6 +430,7 @@ footer .icons a{
       transform: rotate(-45deg);
       background-color: white;
   }
+
 /* Media Queries for Responsiveness */
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -621,3 +622,4 @@ nav a {
         text-align: center;
     }
 }
+
