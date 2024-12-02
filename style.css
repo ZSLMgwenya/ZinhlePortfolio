@@ -445,6 +445,7 @@ footer .icons a{
     width: 80px;
     cursor: pointer;
     margin-left: 150px;
+
 }
 
 .chat-container {
@@ -521,6 +522,7 @@ footer .icons a{
 .user-message {
     background: #3584A7;
     align-self: flex-end;
+    font-size: 13px;
 }
 
 .options {
@@ -530,18 +532,20 @@ footer .icons a{
     padding: 10px;
     border-top: 1px solid #ddd;
     overflow-y: auto;
-    max-height: 150px; /* Adjusted height */
+    max-height: 120px; 
+
 }
 
 .options button {
     flex: 1 1 calc(50% - 10px);
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #30D2BE;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 13px;
 }
 
 .options button:hover {
@@ -660,9 +664,29 @@ font-size: 12px;
 #footer .icons {
 font-size: 2vh;
 }
+.robot-image {
+  width: 50px;
+  cursor: pointer;
+  animation: bounce 3s infinite;
+  align-items: right;
+}
+.options {
+  flex-direction: column;
+  font-size: 9px;
+}
+
+.options button {
+  flex: 1 1 100%;
+  font-size: 9px;
+}
+
+.options button:last-child {
+  margin-bottom: 0;
+}
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
+
 header {
   padding: 1rem 7%;
 }
@@ -732,6 +756,7 @@ nav a {
 .service-right {
   width: 100%;
 }
+
 
 }
 
