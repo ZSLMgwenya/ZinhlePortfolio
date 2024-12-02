@@ -12,7 +12,7 @@
     <!-- Header Section -->
     <header>
         <a href="#" class="logo">Zinhle.</a>
-        <nav>
+        <nav id="nav-menu">
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
@@ -185,7 +185,7 @@
 
    <!-- Chatbot -->
 <div class="intro-container" id="intro-container">
-<img src="assets\chatbots.png" alt="Robot" class="robot-image" onclick="startChat()">
+<img src="assets\robot.png" alt="Robot" class="robot-image" onclick="startChat()">
 </div>
 
 <div class="chat-container" id="chat-container" style="display: none;">
@@ -237,7 +237,6 @@
   };
 </script>
 
-<!-- Javascript for the toggle menu -->
 
 <script>
   const responses = {
@@ -271,7 +270,7 @@
 
   function sendQuestion(question, button) {
       addMessage(question, 'user-message');
-      button.style.display = 'none'; // Hide the selected option
+      button.style.display = 'none'; 
 
       setTimeout(() => {
           const botResponse = responses[question] || "For more questions, feel free to send me an email: zinhlengwenya962@gmail.com.";
@@ -307,6 +306,16 @@
           options[i].style.display = 'block';
       }
   }
+
+</script>
+<!-- JS for togglemenu -->
+<script>
+    function toggleMenu() {
+        const navMenu = document.getElementById('nav-menu');
+        const wrapper = document.querySelector('.wrapper');
+        navMenu.classList.toggle('active');
+        wrapper.classList.toggle('active');
+    }
 </script>
 
 </body>
