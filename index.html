@@ -179,14 +179,22 @@
     <a href="https://linkedin.com/in/zinhle-mgwenya-465b27269/" download="https://linkedin.com/in/zinhle-mgwenya-465b27269/" target="_blank"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
     <a href="https://github.com/ZSLNgwenya" download="https://github.com/ZSLNgwenya" target="_blank"><i class="fa-brands fa-github"></i></a>
 </div>
+<p><center>&copy; 2024 Portfolio | Designed by Zinhle Ngwenya</center></p>
+    </div>
 </div>
-</footer>
-<!-- Chatbot -->
-
    
 <div class="intro-container" id="intro-container">
-    <div class="message bot-message">Hello! How can I assist you today?</div>
-<img src="assets/chatbot.png" alt="Robot" class="robot-image" onclick="startChat()">
+  <div class="message bot-message">How can I assist you today?</div>
+<img src="assets\chatbots.png" alt="Robot" class="robot-image" onclick="startChat()">
+</div>
+
+<div class="chat-container" id="chat-container" style="display: none;">
+<div class="chat-header">
+    <span>Chat</span>
+    <button class="close-button" onclick="closeChat()">X</button>
+</div>
+<div class="chat-box" id="chat-box">
+    <div class="message bot-message">My name is Zee, How can I assist you today?</div>
 </div>
 
 <div class="chat-container" id="chat-container" style="display: none;">
@@ -195,19 +203,23 @@
       <button class="close-button" onclick="closeChat()">X</button>
   </div>
   <div class="chat-box" id="chat-box">
-      <div class="message bot-message">Hello! How can I assist you today?</div>
+      <div class="message bot-message">My name is Zee, How can I assist you today?</div>
   </div>
- 
+  <div class="options" id="options">
+      <button onclick="sendQuestion('Are you available for freelance projects?', this)">Are you available for freelance projects?</button>
+      <button onclick="sendQuestion('Can I collaborate with you on a project?', this)">Can I collaborate with you on a project?</button>
+      <button onclick="sendQuestion('What technologies do you use?', this)">What technologies do you use?</button>
+      <button onclick="sendQuestion('What qualifications do you have?', this)">What qualifications do you have?</button>
+      <button onclick="sendQuestion('Can I see your LinkedIn profile?', this)">Can I see your LinkedIn profile?</button>
+      <button onclick="sendQuestion('What inspired you to become a developer?', this)">What inspired you to become a developer?</button>
+      <button onclick="sendQuestion('Can I contact you?', this)">Can I contact you?</button>
+  </div>
   <div class="input-container">
       <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
       <button onclick="sendMessage()">Send</button>
   </div>
 </div>
-
-
-
-
-
+</footer>
 
 
 
@@ -237,6 +249,7 @@
   };
 </script>
 
+<!-- Javascript for the toggle menu -->
 <script>
 function toggleMenu() {
     const nav = document.querySelector('nav');
