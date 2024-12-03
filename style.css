@@ -666,6 +666,7 @@ font-size: 2vh;
 .options {
   flex-direction: column;
   font-size: 9px;
+  overflow-x: smooth;
 }
 
 .options button {

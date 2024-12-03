@@ -263,7 +263,7 @@
       document.getElementById('user-input').value = '';
 
       setTimeout(() => {
-          const botResponse = responses[userInput] || "For more questions, feel free to send me an email: zinhlengwenya962@gmail.com.";
+          const botResponse = responses[userInput] || "I'm not sure about that. Feel free to reach out via email at zinhlengwenya962@gmail.com for further assistance.";
           addMessage(botResponse, 'bot-message');
       }, 500);
   }
@@ -273,7 +273,7 @@
       button.style.display = 'none'; 
 
       setTimeout(() => {
-          const botResponse = responses[question] || "For more questions, feel free to send me an email: zinhlengwenya962@gmail.com.";
+          const botResponse = responses[question] || "I'm not sure about that. Feel free to reach out via email at zinhlengwenya962@gmail.com for further assistance.";
           addMessage(botResponse, 'bot-message');
       }, 500);
   }
