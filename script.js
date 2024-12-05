@@ -31,7 +31,7 @@ const responses = {
     "What qualifications do you have?": "I have an advanced diploma in IT from Vaal University of Technology, majoring in software development.",
     "Can I see your LinkedIn profile?": "Sure! Here’s my LinkedIn: <a href='https://linkedin.com/in/zinhle-mgwenya-465b27269/' target='_blank'>LinkedIn Profile</a>.",
     "What inspired you to become a developer?": "I enjoy solving problems and creating solutions through code.",
-    "Can I contact you?": "Yes! For more questions, feel free to send me an email: zinhlengwenya962@gmail.com."
+    "Can I contact you?": "Yes! For more questions, feel free to send me an email: zinhlengwenya962@gmail.com, <a href='https://linkedin.com/in/zinhle-mgwenya-465b27269/' target='_blank'>LinkedIn Profile</a>"
 };
 
 function handleKeyPress(event) {
